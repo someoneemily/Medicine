@@ -7,4 +7,8 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
+  post '/method' do
+    @medicine = evaluate(params[:symptom])
+    erb :results
+  end
 end

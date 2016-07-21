@@ -1,6 +1,6 @@
 require 'bundler'
 Bundler.require
-# require_relative "views/title_page.erb"
+require_relative 'models/model.rb'
 
 class ApplicationController < Sinatra::Base
 
@@ -13,7 +13,8 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/method' do
+    @symp = params[:symptom]
     @medicine = evaluate(params[:symptom])
-    erb :results
+    erb :result
   end
 end

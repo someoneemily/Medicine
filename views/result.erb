@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    IN RESULTS page
+    <%= @symp %>
+    <ul>We recommend
+    <% @medicine.each do |med|%>
+      <li><%= med %></li>
+    <%end%>
+    </ul>
+  </body>
+</html>

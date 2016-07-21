@@ -15,6 +15,9 @@ class ApplicationController < Sinatra::Base
   post '/method' do
     @symp = params[:symptom]
     @medicine = evaluate(params[:symptom])
+    @medpic = getpics(@medicine)
+    @meddescrip = getdescrip(@medicine)
+    @levelofpain = feedback(params[:painlevel])
     erb :result
   end
 end

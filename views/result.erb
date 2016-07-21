@@ -9,8 +9,10 @@
     <%= @symp %>
     <ul>We recommend
     <% @medicine.each do |med|%>
+      <a href="html-image-hyperlink.php"><img src= "<%= @medpic[med] %>" title="chart" width="350" height="100" /></a> <br>
       <li><%= med %></li>
     <%end%>
+    <%= @levelofpain %>
     </ul>
   </body>
 </html>

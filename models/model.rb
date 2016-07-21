@@ -33,11 +33,7 @@ def getdescrip(medhash)
     "Advil" => "",
     "Mucinex" => "",
   }
-  meddesarray = []
-  medhash.each do |med|
-    meddesarray.push(meddescrip[med])
-  end
-  meddesarray
+  meddescrip
 end
 def feedback(painlevel)
   if painlevel<5

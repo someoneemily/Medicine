@@ -18,6 +18,15 @@ class ApplicationController < Sinatra::Base
     @medpic = getpics(@medicine)
     @meddescrip = getdescrip(@medicine)
     @levelofpain = feedback(params[:painlevel])
+    @painarea = params[:pain]
+    @lengthoftime = params[:time]
+    @betterorworse = params[:discomfort]
+    @allergy = params[:sel1]
     erb :result
+  end
+  post '/getname' do
+    @firstname = params[:FirstName]
+    @lastname = params[:LastName]
+    erb :index
   end
 end

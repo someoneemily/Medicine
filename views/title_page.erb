@@ -13,29 +13,57 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <!-- <body> -->
+<body style="background-color:black; color: white">
     <div class="container">
       <div class="row">
         <div class="col-md-2" id="headerspacer">
         </div>
-        <div class="col-md-8">
-          <h1 id="Website-title"><strong>WELCOME</strong></h1>
-        </div>
-        <div class="col-md-2 " id="headerspacer">
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2" id="headerspacer">
-        </div>
-        <div class="col-md-8">
-          <h1 id="Website-title"><strong>To</strong></h1>
+        <div class="col-md-8" id="titlefont">
+          <div class="jumbotron">
+          <div class="container">
+          <h1 id="Website-title"><center><strong><big>WELCOME TO</big></strong></center></h1>
         </div>
         <div class="col-md-2 " id="headerspacer">
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2" id="headerspacer">
+      </div>
+      <div class="col-md-8">
+          <div class="jumbotron" id="p">
+          <div class="container">
+        <h1 id="Website-title"><center><strong>SYMPTOM IT</strong></center></h1>
+      </div>
+      <div class="col-md-2 " id="headerspacer">
+      </div>
+    </div>
+    </div>
   </div>
-    <a href="/index">Link to index</a>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-1" id= headerspacer>
+    </div>
+    <form action="/getname" method="post">
+    <div class="col-md-2" id= headerspacer>
+      <!-- we need a value after name  -->
+      First name: <input type="text" name="FirstName">
+    </div>
+    <div class="col-md-2" id= headerspacer>
+    </div>
+    <div class="col-md-2" id= headerspacer>
+      Last name: <input type="text" name="LastName">
+    </div>
+    <div class="col-md-2" id= headerspacer>
+    </div>
+    <div class="col-md-2" id= headerspacer>
+      <input type= "submit" value= "Click Here To Continue">
+    </div>
+  </form>
+    <div class="col-md-1" id= headerspacer>
+    </div>
   </body>
 </html>

@@ -12,6 +12,10 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
+  get '/submit' do
+    erb :result
+  end
+
   post '/method' do
     @symp = params[:symptom]
     @medicine = evaluate(params[:symptom])

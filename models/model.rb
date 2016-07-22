@@ -42,4 +42,3 @@ def feedback(painlevel)
     "Please contact your nearest doctor/physician"
   end
 end
-def

@@ -41,3 +41,18 @@ def feedback(painlevel)
     "Please contact your nearest doctor/physician"
   end
 end
+def pain_area(area)
+  pain_to_med = {
+    "Head" => ["Tylenol", "Excedrin", "Advil"],
+    "Stomach" => ["Prevacid", "Nexium"],
+    "My entire body" => ["Tylenol", "Motrin", "Advil", "Mucinex"]
+  }
+  pain_to_med
+end
+def thentonow(betterorworse)
+  if betterorworse == "Better"
+    "We see that you indicated you are feeling better! That's great news. :)"
+  else
+    "You may want to think about visiting a doctor if your conditions get worse!"
+  end
+end

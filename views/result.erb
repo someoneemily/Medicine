@@ -5,14 +5,41 @@
     <title></title>
   </head>
   <body>
-    IN RESULTS page
+    <h1> We understand how you feel and recommend you take... </h1>
     <%= @symp %>
-    <ul>We recommend
-    <% @medicine.each do |med|%>
-      <a href="html-image-hyperlink.php"><img src= "<%= @medpic[med] %>" title="chart" width="350" height="100" /></a> <br>
-      <li><%= med %></li>
-    <%end%>
-    <%= @levelofpain %>
-    </ul>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1" id= headerspacer>
+        </div>
+        <div class="col-md-2" id= headerspacer>
+          <% @medicine.each do |med|%>
+          <a href="html-image-hyperlink.php"><img src= "<%= @medpic[med] %>" title="chart" width="350" height="100" /></a> <br>
+          <%= @meddescrip[med] %>
+          <li><%= med %></li>
+          <%end%>
+          <%= @levelofpain %>
+        </div>
+        <div class="col-md-2" id= headerspacer>
+        </div>
+        <div class="col-md-2" id= headerspacer>
+          <% @medicine.each do |med|%>
+          <a href="html-image-hyperlink.php"><img src= "<%= @medpic[med] %>" title="chart" width="350" height="100" /></a> <br>
+          <%= @meddescrip[med] %>
+          <li><%= med %></li>
+          <%end%>
+          <%= @levelofpain %>
+        </div>
+        <div class="col-md-2" id= headerspacer>
+        </div>
+        <div class="col-md-2" id= headerspacer>
+          <% @medicine.each do |med|%>
+          <a href="html-image-hyperlink.php"><img src= "<%= @medpic[med] %>" title="chart" width="350" height="100" /></a> <br>
+          <%= @meddescrip[med] %>
+          <li><%= med %></li>
+          <%end%>
+          <%= @levelofpain %>
+        </div>
+        <div class="col-md-1" id= headerspacer>
+        </div>
   </body>
 </html>

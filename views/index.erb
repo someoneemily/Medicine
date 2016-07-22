@@ -2,7 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Symptom-It</title>
+  <div class="jumbotron">
+  <div class="container">
+    <h1>Symptom-It</h1>
+  </div>
+  </div>
+
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -14,14 +19,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2" id="headerspacer">
-        </div>
-        <div class="col-md-8">
-          <h1 id="Website-title"><strong>Symptom-It</strong></h1>
-        </div>
-        <div class="col-md-2 " id="headerspacer">
+
+  <form action= "/method" method= "post">
+    <!-- wont interpolate -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1" id="headerspacer">
+      </div>
+      <div class="col-md-10" id="headerspacer">
+      </div>
+      <div class="col-md-1" id="headerspacer">
       </div>
     </div>
   </div>
@@ -43,6 +50,53 @@
       <div class="col-md-1" id="headerspacer">
       </div>
       <div class="col-md-10">
+        <h1 id="explaination"><strong>Where are you experiencing pain/discomfort?</strong></h1>
+        <!-- <form action=""> -->
+          <!-- do i have to change the name? -->
+          <input type="radio" name="pain" value="Head"> Head <br>
+          <input type="radio" name="pain" value="Stomach"> Stomach <br> <!-- br = line break -->
+          <input type="radio" name="pain" value="My entire body"> My entire body
+        <!-- </form> -->
+      </div>
+      <div class="col-md-1 " id="headerspacer">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1" id="headerspacer">
+    </div>
+    <div class="col-md-10">
+      <h1 id="explaination"><strong>How long has this been going on?</strong></h1>
+      <!-- <form action=""> -->
+        <!-- do i have to change the name? -->
+        <input type="radio" name="time" value="24 Hours"> 24 Hours <br>
+        <input type="radio" name="time" value="A Few Days"> A Few Days <br> <!-- br = line break -->
+        <input type="radio" name="time" value="Week (+)"> Week (+)
+      <!-- </form> -->
+    </div>
+    <div class="col-md-1 " id="headerspacer">
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1" id="headerspacer">
+    </div>
+    <div class="col-md-10">
+      <h1 id="explaination"><strong>Has the pain/discomfort been getting worse or better?</strong></h1>
+      <!-- <form action=""> -->
+        <!-- do i have to change the name? -->
+        <input type="radio" name="discomfort" value="Worse"> Worse <br>
+        <input type="radio" name="discomfort" value="Better"> Better
+    </div>
+  </div>
+      <!-- </form> -->
+    </div>
+    <div class="col-md-1 " id="headerspacer">
+  </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2" id="headerspacer">
+      </div>
+      <div class="col-md-8">
       <div class="form-group">
         <label for="sel1"><h1 id= "explaination"><strong> Are you allergic to any medications? If so find it below.<strong></h1></label>
         <select class="form-control" id="sel1">
@@ -56,91 +110,51 @@
           <option>Aleve</option>
           <option>Vistaril</option>
           <option>Hydroxyzine</option>
-
         </select>
       </div>
-      <div class="col-md-1 " id="headerspacer">
+      <div class="col-md-2" id="headerspacer">
     </div>
   </div>
-          <input type="submit" value="tell me my meds">
-        </form>
+</div>
+</div>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-2" id="headerspacer">
+    </div>
+    <div class="col-md-8">
+      <h1 id="explaination"><strong>On a scale from NO PAIN to EXCRUCIATING PAIN, what are you feeling?</strong></h1>
+      <!-- <form action=""> -->
+        <!-- think we need to add to css -->
+        <a href="html-image-hyperlink.php"><img src="http://3.bp.blogspot.com/-lcJJpBcVaC0/UckT-XtB9eI/AAAAAAAAGco/_2vMA9krwtc/s1600/VAS-chart.gif" title="chart" width="350" height="100" /></a> <br>
+        <input type="radio" name="painlevel" value="0"> 0 <br>
+        <input type="radio" name="painlevel" value="1"> 1 <br>
+        <input type="radio" name="painlevel" value="2"> 2 <br>
+        <input type="radio" name="painlevel" value="3"> 3 <br>
+        <input type="radio" name="painlevel" value="4"> 4 <br>
+        <input type="radio" name="painlevel" value="5"> 5 <br>
+        <input type="radio" name="painlevel" value="6"> 6 <br>
+        <input type="radio" name="painlevel" value="7"> 7 <br>
+        <input type="radio" name="painlevel" value="8"> 8 <br>
+        <input type="radio" name="painlevel" value="9"> 9 <br>
+        <input type="radio" name="painlevel" value="10"> 10
+      <!-- </form> -->
+    </div>
+    <div class="col-md-2 " id="headerspacer">
+  </div>
+</div>
+</div>
+  <!-- <div class="container">
   <div class="row">
     <div class="col-md-1" id="headerspacer">
     </div>
     <div class="col-md-10">
-      <h1 id="explaination"><strong>Where are you experiencing pain/discomfort?</strong></h1>
-      <form action="">
-        <!-- do i have to change the name? -->
-        <input type="radio" name="symptom" value="Head"> Head <br>
-        <input type="radio" name="symptom" value="Stomach"> Stomach <br> <!-- br = line break -->
-        <input type="radio" name="symptom" value="My entire body"> My entire body
-      </form>
+        <input type="submit" value="tell me my meds">
     </div>
-    <div class="col-md-1 " id="headerspacer">
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-1" id="headerspacer">
-  </div>
-  <div class="col-md-10">
-    <h1 id="explaination"><strong>How long has this been going on?</strong></h1>
-    <form action="">
-      <!-- do i have to change the name? -->
-      <input type="radio" name="symptom" value="24 Hours"> 24 Hours <br>
-      <input type="radio" name="symptom" value="A Few Days"> A Few Days <br> <!-- br = line break -->
-      <input type="radio" name="symptom" value="Week (+)"> Week (+)
+      <div class="col-md-1 " id="headerspacer">
+      </div>
+    </div>
+  </div> -->
+      <input type="submit" value="tell me my meds">
     </form>
-  </div>
-  <div class="col-md-1 " id="headerspacer">
-</div>
-</div>
-<div class="row">
-  <div class="col-md-1" id="headerspacer">
-  </div>
-  <div class="col-md-10">
-    <h1 id="explaination"><strong>Has the pain/discomfort been getting worse or better?</strong></h1>
-    <form action="">
-      <!-- do i have to change the name? -->
-      <input type="radio" name="symptom" value="Worse"> Worse <br>
-      <input type="radio" name="symptom" value="Better"> Better
-    </form>
-  </div>
-  <div class="col-md-1 " id="headerspacer">
-</div>
-</div>
-<div class="row">
-  <div class="col-md-1" id="headerspacer">
-  </div>
-  <div class="col-md-10">
-    <h1 id="explaination"><strong>On a scale from NO PAIN to EXCRUCIATING PAIN, what are you feeling?</strong></h1>
-    <form action="">
-      <!-- think we need to add to css -->
-      <a href="html-image-hyperlink.php"><img src="http://3.bp.blogspot.com/-lcJJpBcVaC0/UckT-XtB9eI/AAAAAAAAGco/_2vMA9krwtc/s1600/VAS-chart.gif" title="chart" width="350" height="100" /></a> <br>
-      <input type="radio" name="painlevel" value="0"> 0 <br>
-      <input type="radio" name="painlevel" value="1"> 1 <br>
-      <input type="radio" name="painlevel" value="2"> 2 <br>
-      <input type="radio" name="painlevel" value="3"> 3 <br>
-      <input type="radio" name="painlevel" value="4"> 4 <br>
-      <input type="radio" name="painlevel" value="5"> 5 <br>
-      <input type="radio" name="painlevel" value="6"> 6 <br>
-      <input type="radio" name="painlevel" value="7"> 7 <br>
-      <input type="radio" name="painlevel" value="8"> 8 <br>
-      <input type="radio" name="painlevel" value="9"> 9 <br>
-      <input type="radio" name="painlevel" value="10"> 10
-    </form>
-  </div>
-  <div class="col-md-1 " id="headerspacer">
-</div>
-</div>
-<div class="row">
-  <div class="col-md-1" id="headerspacer">
-  </div>
-  <div class="col-md-10">
-    <button type="submit" form="nameform" value="Submit">Submit</button>
-  </div>
-  <div class="col-md-1 " id="headerspacer">
-</div>
-</div>
-</div>
   </body>
 </html>

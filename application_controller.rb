@@ -23,8 +23,10 @@ class ApplicationController < Sinatra::Base
     @meddescrip = getdescrip(@medicine)
     @levelofpain = feedback(params[:painlevel])
     @painarea = params[:pain]
+    @medforpain = pain_area(@painarea)
     @lengthoftime = params[:time]
     @betterorworse = params[:discomfort]
+    @bwresult = thentonow(@betterorworse)
     @allergy = params[:sel1]
     erb :result
   end

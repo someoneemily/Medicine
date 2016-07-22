@@ -21,9 +21,10 @@ class ApplicationController < Sinatra::Base
     @medicine = evaluate(params[:symptom])
     @medpic = getpics(@medicine)
     @meddescrip = getdescrip(@medicine)
+    @painlevel = params[:painlevel]
     @levelofpain = feedback(params[:painlevel])
     @painarea = params[:pain]
-    @medforpain = pain_area(@painarea)
+    @medforpain = pain_area(@painarea).join(", ")
     @lengthoftime = params[:time]
     @betterorworse = params[:discomfort]
     @bwresult = thentonow(@betterorworse)

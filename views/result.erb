@@ -2,23 +2,49 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <div class="jumbotron" style="background-color:#99c2ff; color: white">
+    <div class="container">
+      <h1>We understand how you feel, we recommend you take...</h1>
+    </div>
+    </div>
     <title></title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1> We understand how you feel and recommend you take... </h1>
-    <%= @symp %>
+  <h3 style= "font-family: arial"><strong> You indicated that you feel: <%= @symp %> </strong></h3>
     <div class="container">
       <div class="row">
-        <div class="col-md-1">
-        </div>
           <% @medicine.each do |med|%>
-          <div class="col-md-2">
-            <a href="html-image-hyperlink.php"><img src= "<%= @medpic[med] %>" title="chart" width="350" height="100" /></a> <br>
-          <%= @meddescrip[med] %>
-          <li><%= med %></li>
+          <div class="col-md-4">
+            <a href="html-image-hyperlink.php"><img class= "img-circle" src= "<%= @medpic[med] %>" title="chart" width="200" height="200" /></a> <br>
+              <h1 style="font-size: 30px">  <%= med %> <h1>
+        <h1 style= "font-size: 15px"><%= @meddescrip[med] %></h1>
           </div>
           <%end%>
-          <%= @levelofpain %>
+      </div>
+      <div class="row">
+        <div class = "box" style="  background-color:  #99c2ff;
+          color: white">
+        <h1 style="font-size: 20px"><strong><center>You indicated that your pain level was: <%= @painlevel%> </center></strong><h1>
+        <h1 style="font-size: 20px"><strong><center> <%= @levelofpain%> </center></strong><h1>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class = "box" style="  background-color:  #99c2ff;
+          color: white">
+        <h1 style="font-size: 20px"><strong><center>You also mentioned that you are feeling: <%= @betterorworse %> </center></strong><h1>
+          <h1 style="font-size: 20px"><strong><center> <%= @bwresult %> </center></strong><h1>
+
+        </div>
       </div>
     </div>
   </body>

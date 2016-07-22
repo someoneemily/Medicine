@@ -47,7 +47,7 @@ def pain_area(area)
     "Stomach" => ["Prevacid", "Nexium"],
     "My entire body" => ["Tylenol", "Motrin", "Advil", "Mucinex"]
   }
-  pain_to_med
+  pain_to_med[area]
 end
 def thentonow(betterorworse)
   if betterorworse == "Better"

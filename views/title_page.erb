@@ -14,35 +14,31 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   </head>
   <!-- <body> -->
-<body style="background-color:black; color: white">
+  <body style="background-color: white">
     <div class="container">
       <div class="row">
-        <div class="col-md-2" id="headerspacer">
+        <div class="col-md-2">
         </div>
         <div class="col-md-8" id="titlefont">
-          <div class="jumbotron">
-          <div class="container">
-          <h1 id="Website-title"><center><strong><big>WELCOME TO</big></strong></center></h1>
+          <div class="jumbotron" style="background-color:#99c2ff; color: white">
+            <div class="container">
+              <h1 id="Website-title"><center><strong><big>WELCOME TO</big></strong></center></h1>
+            </div>
+          </div>
         </div>
-        <div class="col-md-2 " id="headerspacer">
+      </div>
+      <div class="row">
+          <div class="col-md-2" id="headerspacer">
+          </div>
+          <div class="col-md-8">
+              <div class="jumbotron" id="p" style="background-color:#99c2ff; color: white">
+              <div class="container" class="element-right">
+                <h1 id="Website-title"  ><center><strong>SYMPTOM-IT</strong></center></h1>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2" id="headerspacer">
-      </div>
-      <div class="col-md-8">
-          <div class="jumbotron" id="p">
-          <div class="container">
-        <h1 id="Website-title"><center><strong>SYMPTOM IT</strong></center></h1>
-      </div>
-      <div class="col-md-2 " id="headerspacer">
-      </div>
-    </div>
-    </div>
-  </div>
-</div>
 <div class="container">
   <div class="row">
     <div class="col-md-1" id= headerspacer>
@@ -50,16 +46,18 @@
     <form action="/getname" method="post">
     <div class="col-md-2" id= headerspacer>
       <!-- we need a value after name  -->
-      First name: <input type="text" name="FirstName">
+      <label for="FirstName" style= "color: #99c2ff">First Name:</label>
+        <input type="text" name="FirstName" style="color: black">
     </div>
     <div class="col-md-2" id= headerspacer>
     </div>
     <div class="col-md-2" id= headerspacer>
-      Last name: <input type="text" name="LastName">
+      <label for="LastName" style= "color: #99c2ff">Last Name:</label>
+       <input type="text" name="LastName" style="color: black">
     </div>
     <div class="col-md-2" id= headerspacer>
     </div>
-    <div class="col-md-2" id= headerspacer>
+    <div class="col-md-2" id= headerspacer id= color>
       <input type= "submit" value= "Click Here To Continue">
     </div>
   </form>

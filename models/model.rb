@@ -36,9 +36,9 @@ def getdescrip(medhash)
   meddescrip
 end
 def feedback(painlevel)
-  if painlevel<5
+  if painlevel.to_i<5
     "Rest up, Stay hydrated, Eat healthy food"
-  elsif painlevel>=5
+  elsif painlevel.to_i>=5
     "Please contact your nearest doctor/physician"
   end
 end
